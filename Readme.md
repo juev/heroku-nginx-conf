@@ -8,7 +8,7 @@ For the work necessary to install [heroku toolbelt](https://toolbelt.heroku.com 
 
     (~) $ mkdir test
     (~) $ cd test
-    (test) $ git clone https://github.com/Juev/Heroku-Nginx.git
+    (test) $ git clone https://github.com/Juev/heroku-nginx-conf.git
     (test) $ heroku create --stack cedar --buildpack https://github.com/abhishekmunie/heroku-buildpack-nginx.git
     (test) $ git push heroku master
 
