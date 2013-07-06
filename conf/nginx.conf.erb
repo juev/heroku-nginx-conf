@@ -64,7 +64,7 @@ http {
 
         try_files $uri $uri/ =404;
         # opt-in to the future
-        expires 2592000;
+        # expires 2592000;
         charset utf-8;
 
         location ~ /\. {
@@ -80,12 +80,7 @@ http {
         
         location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|svgz|ttf|otf|woff|eot|mp4|ogg|ogv|webm)$ {
           access_log off;
-          add_header Cache-Control  "public, max-stale=2592000";
-          add_header "Vary" "Accept-Encoding";
-        }
-        
-#        location ~* ^.+\.(js|css|xml|gz)$ {
-
-#        }
+          add_header Cache-Control  "public, max-age=2592000";          
+        }        
     }
 }
