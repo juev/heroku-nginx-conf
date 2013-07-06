@@ -74,7 +74,7 @@ http {
         }
         
         location ~* ^.+\.(html|htm|php|html.gz)$ {
-          add_header Cache-Control "private, max-stale=2592000, must-revalidate";
+          add_header Cache-Control "max-age=0, no-cache";
           add_header "X-UA-Compatible" "IE=Edge,chrome=1";
         }
         
